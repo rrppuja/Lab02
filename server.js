@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
   
 });
 
-app.post("/", upload.single("photo"), (req, res) => {
+app.post("/public/photos", upload.single("photo"), (req, res) => {
   res.send("Thank you for your submission");
 });
 
