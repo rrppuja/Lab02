@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-//const bodyParser = require("body-parser");
 const multer = require("multer");
 const HTTP_PORT = process.env.PORT || 8080;
 
@@ -21,7 +20,6 @@ const storage = multer.diskStorage({
 // tell multer to use the diskStorage function for naming files instead of the default.
 const upload = multer({ storage: storage });
 
-//app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("./public/"));
 
 app.get("/", (req, res) => {
