@@ -13,7 +13,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("./public/"));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "forms.html"));
+  res.sendFile(path.join(__dirname, "views", "index.html"));
+  
 });
+
+app.post("/", (req, res) => {
+  res.send("Thank you for your submission");
+});
+
 
 app.listen(HTTP_PORT, onHttpStart);
